@@ -12,12 +12,11 @@ class VGG16:
     vgg = np.load('D:\\datasets\\VGG/vgg16.npy', encoding='latin1')
     vgg_layers = vgg.item()
     vgg_graph = {}
-    transfer_graph = {}
 
-    def __init__(self):
+    def __init__(self, x):
         # retrieve the layers before fc
         graph = {}
-        graph['input'] = tf.Variable(np.zeros((CONFIG.IMAGE_HEIGHT, CONFIG.IMAGE_WIDTH, 3)), dtype='float32')
+        graph['input'] = x
         graph['conv1_1'] = self.conv2d_relu(graph['input'], 'conv1_1')
         graph['conv1_2'] = self.conv2d_relu(graph['conv1_1'], 'conv1_2')
         graph['maxpool1'] = self.maxpool(graph['conv1_2'])
@@ -43,35 +42,28 @@ class VGG16:
 
         self.vgg_graph = graph
 
-
     def conv2d_relu(self, pre_layer, layer):
         w = self.vgg_layers[layer][0]
         b = self.vgg_layers[layer][1]
         w = tf.constant(w)
         b = tf.constant(b)
-
-        conv = tf.nn.conv2d(pre_layer, filter=w, strides=[1, 1, 1, 1], padding='SAME', name=layer) + b
-        conv_relu = tf.nn.relu(conv)
-        return conv_relu
-
+        return tf.nn.relu(tf.nn.conv2d(pre_layer, filter=w, strides=[1, 1, 1, 1], padding='SAME', name=layer) + b)
 
     def maxpool(self, pre_layer):
         pool = tf.nn.max_pool(pre_layer, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
         return pool
 
-
-    def transfer(self, y_train):
-        trans_graph = self.vgg_graph
+    def renew_layers(self, y_train):
+        renew_graph = self.vgg_graph
         joint = self.vgg_graph['maxpool5']
 
-        trans_graph['flatten'] = tf.reshape(joint, [-1, 7*7*512])
-        trans_graph['fc6'] = tf.layers.dense(trans_graph['flatten'], 512, name='fc6')
-        trans_graph['fc7'] = tf.layers.dense(trans_graph['fc6'], 2, name='fc7')
+        renew_graph['flatten'] = tf.reshape(joint, [-1, 7*7*512])
+        renew_graph['fc6'] = tf.layers.dense(renew_graph['flatten'], 512, name='fc6')
+        renew_graph['fc7'] = tf.layers.dense(renew_graph['fc6'], 2, name='fc7')
+        y_hat = tf.add(renew_graph['fc7'], 0, name='y_hat')  # the intermediate value used to calculate the accuracy
 
-        self.transfer_graph = trans_graph
+        cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=y_hat, labels=y_train))
+        model = tf.train.AdamOptimizer().minimize(cost)
 
-        cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=trans_graph['fc7'], labels=y_train))
-        train = tf.train.AdamOptimizer().minimize(cost)
-
-        return train
+        return cost, model, y_hat
 
