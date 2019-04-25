@@ -43,6 +43,7 @@ class VGG16:
 
         self.vgg_graph = graph
 
+
     def conv2d_relu(self, pre_layer, layer):
         w = self.vgg_layers[layer][0]
         b = self.vgg_layers[layer][1]
@@ -53,8 +54,24 @@ class VGG16:
         conv_relu = tf.nn.relu(conv)
         return conv_relu
 
+
     def maxpool(self, pre_layer):
         pool = tf.nn.max_pool(pre_layer, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
         return pool
 
+
+    def transfer(self, y_train):
+        trans_graph = self.vgg_graph
+        joint = self.vgg_graph['maxpool5']
+
+        trans_graph['flatten'] = tf.reshape(joint, [-1, 7*7*512])
+        trans_graph['fc6'] = tf.layers.dense(trans_graph['flatten'], 512, name='fc6')
+        trans_graph['fc7'] = tf.layers.dense(trans_graph['fc6'], 2, name='fc7')
+
+        self.transfer_graph = trans_graph
+
+        cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=trans_graph['fc7'], labels=y_train))
+        train = tf.train.AdamOptimizer().minimize(cost)
+
+        return train
 
