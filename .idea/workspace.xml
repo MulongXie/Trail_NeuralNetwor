@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9b4e32-8808-4e77-bee2-3d6777f84d8e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/vgg_transfer/imgProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/vgg_transfer/imgProcessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vgg_transfer/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/vgg_transfer/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,16 +17,23 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+            <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
-                <provider selected="true" editor-type-id="text-editor" />
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="289">
+                    <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+                    <folding>
+                      <element signature="e#0#26#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
               </entry>
             </file>
-            <file leaf-file-name="imgProcessing.py" pinned="false" current-in-tab="true">
+            <file leaf-file-name="imgProcessing.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/vgg_transfer/imgProcessing.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="790">
-                    <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+                    <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
                     <folding>
                       <element signature="e#0#10#0" expanded="true" />
                     </folding>
@@ -130,10 +138,10 @@
         <option value="$PROJECT_DIR$/transferLearning.py" />
         <option value="$PROJECT_DIR$/test.ipynb" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/vgg_transfer/main.py" />
         <option value="$PROJECT_DIR$/vgg_transfer/vgg16.py" />
         <option value="$PROJECT_DIR$/vgg_transfer/model.py" />
         <option value="$PROJECT_DIR$/vgg_transfer/imgProcessing.py" />
+        <option value="$PROJECT_DIR$/vgg_transfer/main.py" />
       </list>
     </option>
   </component>
@@ -188,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.imgProcessing">
+  <component name="RunManager" selected="Python.main">
     <configuration name="imgProcessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Trail_NeuralNetwor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,6 +210,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vgg_transfer/imgProcessing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Trail_NeuralNetwor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vgg_transfer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vgg_transfer/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -247,9 +273,11 @@
       <item itemvalue="Python.test" />
       <item itemvalue="Python.model" />
       <item itemvalue="Python.imgProcessing" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.imgProcessing" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.test" />
@@ -271,7 +299,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2688" y="0" width="1159" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.18453293" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -363,9 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vgg_transfer/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -386,20 +410,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/imgProcessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/transferLearning_mofan.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="98" column="26" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vgg_transfer/imgProcessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

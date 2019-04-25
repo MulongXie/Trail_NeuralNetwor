@@ -39,6 +39,7 @@ def load_image_join_path(label='D:/datasets/dataset_house/train.txt', root_path=
         print(line)
     label.append(int(line))
 
+    # shuffle the data
     np.random.seed(0)
     label = np.random.permutation(label)
     np.random.seed(0)
@@ -48,10 +49,3 @@ def load_image_join_path(label='D:/datasets/dataset_house/train.txt', root_path=
     print(len(imgs))
 
     return imgs, label
-
-
-img, label = load_image_join_path()
-label = expand(label, 2)
-
-print(np.shape(img))
-print(np.shape(label))
