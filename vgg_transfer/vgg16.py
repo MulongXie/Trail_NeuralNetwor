@@ -60,13 +60,13 @@ class VGG16:
         renew_graph = self.vgg_graph
         joint = self.vgg_graph['maxpool5']
 
-        renew_graph['flatten'] = tf.reshape(joint, [-1, 7*7*512])
-        renew_graph['fc6'] = tf.layers.dense(renew_graph['flatten'], 512, name='fc6')
+        renew_graph['flatten'] = tf.contrib.layers.flatten(joint)
+        renew_graph['fc6'] = tf.layers.dense(renew_graph['flatten'], 256, name='fc6')
         renew_graph['fc7'] = tf.layers.dense(renew_graph['fc6'], 2, name='fc7')
         y_hat = tf.add(renew_graph['fc7'], 0, name='y_hat')  # the intermediate value used to calculate the accuracy
 
         cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=y_hat, labels=y_train))
-        model = tf.train.AdamOptimizer().minimize(cost)
+        model = tf.train.AdamOptimizer(0.1).minimize(cost)
 
         return cost, model, y_hat
 
