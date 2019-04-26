@@ -12,11 +12,9 @@ y = ip.expand(y, 2)  # label has 2 classes
 
 
 # *** split the train and test data ***
-x_train_org = x[:-200]
-x_train = x_train_org / 255.
+x_train = x[:-200]
 y_train = y[:-200]
-x_test_org = x[-200:]
-x_test = x_test_org / 255.
+x_test = x[-200:]
 y_test = y[-200:]
 
 print(np.shape(x_train))
