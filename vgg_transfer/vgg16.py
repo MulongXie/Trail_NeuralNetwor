@@ -42,11 +42,14 @@ class VGG16:
 
         self.vgg_graph = graph
 
+        print("*************** VGG initialized *************")
+
     def conv2d_relu(self, pre_layer, layer):
         w = self.vgg_layers[layer][0]
         b = self.vgg_layers[layer][1]
         w = tf.constant(w)
         b = tf.constant(b)
+        print(np.shape(w))
         return tf.nn.relu(tf.nn.conv2d(pre_layer, filter=w, strides=[1, 1, 1, 1], padding='SAME', name=layer) + b)
 
     def maxpool(self, pre_layer):
@@ -62,7 +65,7 @@ class VGG16:
         renew_graph['fc7'] = tf.layers.dense(renew_graph['fc6'], 2, name='fc7')
         y_hat = tf.add(renew_graph['fc7'], 0, name='y_hat')  # the intermediate value used to calculate the accuracy
 
-        cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=y_hat, labels=y_train))
+        cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=y_hat, labels=y_train))
         model = tf.train.AdamOptimizer().minimize(cost)
 
         return cost, model, y_hat

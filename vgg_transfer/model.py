@@ -6,16 +6,22 @@ import numpy as np
 # x: (number_sample, img_hei, img_wid, img_channel)
 # y: (number_sample, number_classes)
 def train(x_train, y_train, x_test, y_test, iter_num=100, save_path='trained_model/house'):
+    tf.reset_default_graph()
+
     x_shape = np.shape(x_train)
     y_shape = np.shape(y_train)
     x = tf.placeholder(tf.float32, [None, x_shape[1], x_shape[2], x_shape[3]])
     y = tf.placeholder(tf.float32, [None, y_shape[1]])
 
-    vgg = vgg16.VGG16(x_train)
-    cost, model, y_hat = vgg.renew_layers(y_train)
+    vgg = vgg16.VGG16(x)
+    cost, model, y_hat = vgg.renew_layers(y)
+
+    init = tf.global_variables_initializer()
 
     # open session
-    with tf.Session as sess:
+    with tf.Session() as sess:
+        sess.run(init)
+
         for i in range(iter_num):
             _, loss = sess.run([model, cost], feed_dict={x: x_train, y: y_train})
 

@@ -36,7 +36,7 @@ def load_image_join_path(label='D:/datasets/dataset_house/train.txt', root_path=
         else:
             line = int(line[:-1])
             label.append(line)
-        print(line)
+        # print(line)
     label.append(int(line))
 
     # shuffle the data
