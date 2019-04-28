@@ -12,6 +12,7 @@ class VGG16:
     vgg = np.load('D:\\datasets\\VGG/vgg16.npy', encoding='latin1')
     vgg_layers = vgg.item()
     vgg_graph = {}
+    renew_graph = {}
 
     def __init__(self, x):
         # retrieve the layers before fc
@@ -41,6 +42,7 @@ class VGG16:
         graph['maxpool5'] = self.maxpool(graph['conv5_3'])
 
         self.vgg_graph = graph
+        self.renew_graph = graph
 
         print("*************** VGG initialized *************")
 
@@ -57,16 +59,14 @@ class VGG16:
         return pool
 
     def renew_layers(self, y_train):
-        renew_graph = self.vgg_graph
-        joint = self.vgg_graph['maxpool5']
+        self.renew_graph['flatten'] = tf.contrib.layers.flatten(self.renew_graph['maxpool5'])
+        self.renew_graph['fc6'] = tf.contrib.layers.fully_connected(self.renew_graph['flatten'], 1024)
+        self.renew_graph['fc7'] = tf.contrib.layers.fully_connected(self.renew_graph['fc6'], 2, activation_fn=None)
+        y_hat = tf.add(self.renew_graph['fc7'], 0, name='y_hat')  # the intermediate value used to calculate the accuracy
 
-        renew_graph['flatten'] = tf.contrib.layers.flatten(joint)
-        renew_graph['fc6'] = tf.layers.dense(renew_graph['flatten'], 256, name='fc6')
-        renew_graph['fc7'] = tf.layers.dense(renew_graph['fc6'], 2, name='fc7')
-        y_hat = tf.add(renew_graph['fc7'], 0, name='y_hat')  # the intermediate value used to calculate the accuracy
-
+        print('y_hat type ' + str(type(y_hat)))
         cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=y_hat, labels=y_train))
-        model = tf.train.AdamOptimizer(0.1).minimize(cost)
+        model = tf.train.AdamOptimizer(0.001).minimize(cost)
 
         return cost, model, y_hat
 

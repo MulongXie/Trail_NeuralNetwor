@@ -1,11 +1,12 @@
 import vgg16
 import tensorflow as tf
 import numpy as np
+from sklearn.metrics import accuracy_score
 
 
 # x: (number_sample, img_hei, img_wid, img_channel)
 # y: (number_sample, number_classes)
-def train(x_train, y_train, x_test, y_test, iter_num=10, batch_size=32, save_path='trained_model/house'):
+def train(x_train, y_train, x_test, y_test, iter_num=10, batch_size=32, save_path='D:\\datasets\\Trail_NN\\trained_model/house'):
     tf.reset_default_graph()
 
     # *** step1 *** read and convert data
@@ -16,8 +17,8 @@ def train(x_train, y_train, x_test, y_test, iter_num=10, batch_size=32, save_pat
     y_train_float = tf.cast(y_train, tf.float32)
     x_test = tf.cast(x_test, tf.float32)
     y_test = tf.cast(y_test, tf.float32)
-    x = tf.placeholder(tf.float32, [None, x_shape[1], x_shape[2], x_shape[3]])
-    y = tf.placeholder(tf.float32, [None, y_shape[1]])
+    x = tf.placeholder(tf.float32, [None, x_shape[1], x_shape[2], x_shape[3]], name='input')
+    y = tf.placeholder(tf.float32, [None, y_shape[1]], name='output')
 
     # *** step2 *** batch the data
     batch_num = int(sample_num / batch_size) + 1
@@ -47,8 +48,6 @@ def train(x_train, y_train, x_test, y_test, iter_num=10, batch_size=32, save_pat
 
                 print('the ' + str(i) + 'th iteration')
                 print(loss)
-                print(y_hat_re[:4, :])
-                print(y_batch[:4, :])
 
                 # correct = tf.equal(tf.argmax(y_hat, 1), tf.argmax(y, 1))
                 # # convert to float and calculate the mean correct rate
@@ -69,3 +68,53 @@ def train(x_train, y_train, x_test, y_test, iter_num=10, batch_size=32, save_pat
         saver = tf.train.Saver()
         saver.save(sess, save_path)
 
+
+def predict(x, load_path='D:\\datasets\\Trail_NN\\trained_model'):
+
+    x = np.reshape(x, (1, x.shape[0], x.shape[1], x.shape[2]))
+
+    with tf.Session() as sess:
+        saver = tf.train.import_meta_graph(load_path + '/house.meta')
+        saver.restore(sess, tf.train.latest_checkpoint(load_path))
+
+        graph = tf.get_default_graph()
+        x_tf = graph.get_tensor_by_name('input:0')
+        y_hat = graph.get_tensor_by_name('y_hat:0')
+        y_pre = tf.argmax(y_hat, 1)
+
+        pre = sess.run(y_pre, feed_dict={x_tf: x})
+        print(pre)
+        if pre[0] == 1:
+            print("House")
+        else:
+            print("Not Building")
+
+    return y_pre
+
+
+def evaluate(x_test, y_test, load_path='D:\\datasets\\Trail_NN\\trained_model'):
+
+    with tf.Session() as sess:
+        saver = tf.train.import_meta_graph(load_path + '/house.meta')
+        saver.restore(sess, tf.train.latest_checkpoint(load_path))
+
+        graph = tf.get_default_graph()
+        x_tf = graph.get_tensor_by_name('input:0')
+        y_hat = graph.get_tensor_by_name('y_hat:0')
+        y_pre = tf.argmax(y_hat, 1)
+
+        y_predicts = []
+        for x in x_test:
+            x = np.reshape(x, (1, x.shape[0], x.shape[1], x.shape[2]))
+            pre = sess.run(y_pre, feed_dict={x_tf: x})
+
+            if pre[0] == 1:
+                print("House")
+            else:
+                print("Not Building")
+
+            y_predicts.append(y_hat)
+
+        acc = accuracy_score(y_test, y_predicts)
+        predict('**** accuracy:%d ****' %acc)
+        return acc

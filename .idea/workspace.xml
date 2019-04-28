@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9b4e32-8808-4e77-bee2-3d6777f84d8e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/vgg_transfer/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/vgg_transfer/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vgg_transfer/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/vgg_transfer/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vgg_transfer/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/vgg_transfer/test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vgg_transfer/vgg16.py" beforeDir="false" afterPath="$PROJECT_DIR$/vgg_transfer/vgg16.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,14 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47207588">
+    <splitter split-orientation="horizontal" split-proportion="0.44089836">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="trail_tfbatch.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="trail_tfbatch.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/vgg_transfer/trail_tfbatch.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+                <state relative-caret-position="442">
+                  <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
                   <folding>
                     <element signature="e#0#23#0" expanded="true" />
                   </folding>
@@ -38,11 +37,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="transferLearning_mofan.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="transferLearning_mofan.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/transferLearning_mofan.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="126" column="67" lean-forward="true" selection-start-line="126" selection-start-column="67" selection-end-line="126" selection-end-column="67" />
+                <state relative-caret-position="220">
+                  <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
@@ -54,8 +53,8 @@
           <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                <state relative-caret-position="252">
+                  <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -63,11 +62,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/vgg_transfer/model.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="201">
-                  <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+                <state relative-caret-position="584">
+                  <caret line="110" column="27" lean-forward="true" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#12#0" expanded="true" />
                   </folding>
@@ -75,11 +74,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="vgg16.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="vgg16.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/vgg_transfer/vgg16.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+                <state relative-caret-position="986">
+                  <caret line="59" selection-start-line="59" selection-end-line="59" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -117,9 +116,9 @@
         <option value="$PROJECT_DIR$/vgg_transfer/imgProcessing.py" />
         <option value="$PROJECT_DIR$/vgg_transfer/test.py" />
         <option value="$PROJECT_DIR$/vgg_transfer/test2.py" />
-        <option value="$PROJECT_DIR$/vgg_transfer/main.py" />
         <option value="$PROJECT_DIR$/vgg_transfer/trail_tfbatch.py" />
         <option value="$PROJECT_DIR$/vgg_transfer/vgg16.py" />
+        <option value="$PROJECT_DIR$/vgg_transfer/main.py" />
         <option value="$PROJECT_DIR$/vgg_transfer/model.py" />
       </list>
     </option>
@@ -213,24 +212,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Trail_NeuralNetwor" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vgg_transfer" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vgg_transfer/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Trail_NeuralNetwor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -267,20 +248,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="vgg16" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Trail_NeuralNetwor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vgg_transfer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vgg_transfer/vgg16.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.test2" />
       <item itemvalue="Python.trail_tfbatch" />
       <item itemvalue="Python.model" />
+      <item itemvalue="Python.vgg16" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.vgg16" />
         <item itemvalue="Python.trail_tfbatch" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.test2" />
-        <item itemvalue="Python.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -306,11 +305,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22875817" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22875817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -321,22 +320,22 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22875817" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1085353" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22875817" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -344,10 +343,175 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="38" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transferLearning_mofan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="98" column="26" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transferLearning_coursera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="117" column="29" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transferLearning_coursera_apply.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transferLearning.py" />
+    <entry file="file://$PROJECT_DIR$/test.ipynb" />
+    <entry file="file://$PROJECT_DIR$/../../done/DeepLearning-NeuralNetwork/NST/nst_new1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16751">
+          <caret line="316" column="11" lean-forward="true" selection-start-line="316" selection-start-column="11" selection-end-line="316" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/transferLearning_coursera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="117" column="29" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transferLearning_coursera_apply.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/imgProcessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/test2.py" />
+    <entry file="file://D:/Anaconda/Lib/site-packages/tensorflow/python/training/input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="987" selection-start-line="987" selection-end-line="987" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/test.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/trail_tfbatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transferLearning_mofan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="839">
+          <caret line="92" column="49" lean-forward="true" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/vgg16.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vgg_transfer/trail_tfbatch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -479,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/transferLearning_mofan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="126" column="67" lean-forward="true" selection-start-line="126" selection-start-column="67" selection-end-line="126" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vgg_transfer/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -493,42 +650,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vgg_transfer/trail_tfbatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="442">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vgg_transfer/model.py">
+    <entry file="file://$PROJECT_DIR$/transferLearning_mofan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vgg_transfer/vgg16.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        <state relative-caret-position="986">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda/Lib/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="1075" selection-start-line="1075" selection-end-line="1075" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vgg_transfer/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="110" column="27" lean-forward="true" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
