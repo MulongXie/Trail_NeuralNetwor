@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import os
-from nn_vgg16 import CONFIG
+from nn_model import CONFIG
 
 
 def flower2num(name):

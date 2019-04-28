@@ -5,9 +5,20 @@ from sklearn.metrics import accuracy_score
 import nn_vgg16
 import nn_imgProcessing as ip
 
+
+class CONFIG:
+    IMAGE_WIDTH = 64
+    IMAGE_HEIGHT = 64
+
+    ITER_NUM = 10
+    BATCH_SIZE = 32
+
+    MODEL_NAME = 'flower'
+
+
 # x: (number_sample, img_hei, img_wid, img_channel)
 # y: (number_sample, number_classes)
-def train(x_train, y_train, x_test, y_test, save_path, iter_num=10, batch_size=32):
+def train(x_train, y_train, x_test, y_test, save_path, iter_num=CONFIG.ITER_NUM, batch_size=CONFIG.BATCH_SIZE):
     tf.reset_default_graph()
 
     # *** step1 *** read and convert data
@@ -86,7 +97,7 @@ def predict(x, load_path):
 
     with tf.Session() as sess:
         # load data and restore session
-        saver = tf.train.import_meta_graph(load_path + '/flower.meta')
+        saver = tf.train.import_meta_graph(load_path + '/' + CONFIG.MODEL_NAME + '.meta')
         saver.restore(sess, tf.train.latest_checkpoint(load_path))
 
         # fetch the trained end layers
@@ -105,7 +116,7 @@ def evaluate(x_test, y_test, load_path):
 
     with tf.Session() as sess:
         # load data and restore session
-        saver = tf.train.import_meta_graph(load_path + '/flower.meta')
+        saver = tf.train.import_meta_graph(load_path + '/' + CONFIG.MODEL_NAME + '.meta')
         saver.restore(sess, tf.train.latest_checkpoint(load_path))
 
         # fetch the trained end layers

@@ -2,11 +2,6 @@ import numpy as np
 import tensorflow as tf
 
 
-class CONFIG:
-    IMAGE_WIDTH = 64
-    IMAGE_HEIGHT = 64
-
-
 class VGG16:
 
     vgg = np.load('D:\\datasets\\VGG/vgg16.npy', encoding='latin1')

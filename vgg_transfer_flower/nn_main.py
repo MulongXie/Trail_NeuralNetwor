@@ -38,6 +38,6 @@ if predict:
     cv2.waitKey(0)
 
 # *** evaluate the test accuracy ***
-eval = False
+eval = True
 if eval:
     nn_model.evaluate(x_train, y_org_train.tolist(), load_path='D:\\datasets\\Trail_NN\\trained_model_flower')
