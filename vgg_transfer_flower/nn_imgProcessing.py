@@ -1,10 +1,26 @@
 import cv2
 import numpy as np
+import os
 from nn_vgg16 import CONFIG
 
 
+def flower2num(name):
+    num = 0
+    if name == 'daisy':
+        num = 0
+    elif name == 'dandelion':
+        num = 1
+    elif name == 'roses':
+        num = 2
+    elif name == 'sunflowers':
+        num = 3
+    elif name == 'tulips':
+        num = 4
+    return num
+
+
 # transfer int into c dimensions one-hot array
-def expand(label, c=10):
+def expand(label, c):
     # return y : (num_class, num_samples)
     y = np.eye(c)[label]
     y = np.squeeze(y)
@@ -21,31 +37,41 @@ def img_read(img_name):
     return img
 
 
-def load_image_join_path(label, root_path):
-    file = open(label, 'r')
+def load_image_flower(root_path):
+
     imgs = []
-    label = []
-    for line_num, line in enumerate(file):
-        if line[:len(line) - 1] == '':
-            print('****************end*******************')
-            break
-        if line_num % 2 == 0:
-            line = root_path + line[:-1]
-            img = img_read(line)
-            imgs.append(img)
-        else:
-            line = int(line[:-1])
-            label.append(line)
-        # print(line)
-    label.append(int(line))
+    imgs_label = []
+    for label in os.listdir(root_path):
+        label_num = flower2num(label)
+        print("--- label: " + label + ' ' + str(label_num) + ' ---')
+        dir_path = os.path.join(root_path, label)
+
+        for _, _, files in os.walk(dir_path):
+            for i, f in enumerate(files):
+                img_path = os.path.join(dir_path, f)
+                img = cv2.imread(img_path)
+                imgs.append(img)
+                imgs_label.append(label_num)
 
     # shuffle the data
     np.random.seed(0)
-    label = np.random.permutation(label)
-    np.random.seed(0)
     imgs = np.random.permutation(imgs)
+    np.random.seed(0)
+    imgs_label = np.random.permutation(imgs_label)
 
     print(np.shape(imgs))
     print(len(imgs))
 
-    return imgs, label
+    return imgs, imgs_label
+
+
+    # shuffle the data
+    # np.random.seed(0)
+    # label = np.random.permutation(label)
+    # np.random.seed(0)
+    # imgs = np.random.permutation(imgs)
+    #
+    # print(np.shape(imgs))
+    # print(len(imgs))
+    #
+    # return imgs, label
