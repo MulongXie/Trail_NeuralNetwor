@@ -25,17 +25,17 @@ print('*** training sample shape: ' + str(np.shape(x_train)) + '***')
 # *** train the NN model ***
 train = True
 if train:
-    nn_model.train(x_train, y_train, x_test, y_test, save_path='D:\\datasets\\Trail_NN\\trained_model/house')
+    nn_model.train(x_train, y_train, x_test, y_test, save_path='D:\\datasets\\Trail_NN\\trained_model_flower\\flower')
 
 # *** test and predict ***
 predict = False
 if predict:
     test_index = 165
-    y_hat = nn_model.predict(x_test[test_index], load_path='D:\\datasets\\Trail_NN\\trained_model')
+    y_hat = nn_model.predict(x_test[test_index], load_path='D:\\datasets\\Trail_NN\\trained_model_flower')
     cv2.imshow('img', cv2.resize(x_test[test_index], (200, 200)))
     cv2.waitKey(0)
 
 # *** evaluate the test accuracy ***
 eval = False
 if eval:
-    nn_model.evaluate(x_test, y_org_test.tolist(), load_path='D:\\datasets\\Trail_NN\\trained_model')
+    nn_model.evaluate(x_test, y_org_test.tolist(), load_path='D:\\datasets\\Trail_NN\\trained_model_flower')

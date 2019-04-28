@@ -1,12 +1,13 @@
-import nn_vgg16
 import tensorflow as tf
 import numpy as np
 from sklearn.metrics import accuracy_score
 
+import nn_vgg16
+import nn_imgProcessing as ip
 
 # x: (number_sample, img_hei, img_wid, img_channel)
 # y: (number_sample, number_classes)
-def train(x_train, y_train, x_test, y_test, save_path, iter_num=10, batch_size=32):
+def train(x_train, y_train, x_test, y_test, save_path, iter_num=10, batch_size=16):
     tf.reset_default_graph()
 
     # *** step1 *** read and convert data
@@ -83,11 +84,7 @@ def predict(x, load_path):
         y_pre = tf.argmax(y_hat, 1)
 
         pre = sess.run(y_pre, feed_dict={x_tf: x})
-        print(pre)
-        if pre[0] == 1:
-            print("House")
-        else:
-            print("Not Building")
+        print(ip.num2flower(pre[0]))
 
     return y_pre
 

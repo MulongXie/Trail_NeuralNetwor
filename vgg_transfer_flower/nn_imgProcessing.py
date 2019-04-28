@@ -18,6 +18,20 @@ def flower2num(name):
         num = 4
     return num
 
+def num2flower(num):
+    flower = 0
+    if num == 0:
+        flower = 'daisy'
+    elif num == 1:
+        flower = 'dandelion'
+    elif num == 2:
+        flower = 'roses'
+    elif num == 3:
+        flower = 'sunflowers'
+    elif num == 4:
+        flower = 'tulips'
+    return flower
+
 
 # transfer int into c dimensions one-hot array
 def expand(label, c):
@@ -50,6 +64,8 @@ def load_image_flower(root_path):
             for i, f in enumerate(files):
                 img_path = os.path.join(dir_path, f)
                 img = cv2.imread(img_path)
+                img = cv2.resize(img, (CONFIG.IMAGE_HEIGHT, CONFIG.IMAGE_WIDTH))
+
                 imgs.append(img)
                 imgs_label.append(label_num)
 
