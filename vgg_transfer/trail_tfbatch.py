@@ -1,5 +1,5 @@
 import tensorflow as tf
-import imgProcessing as ip
+import nn_imgProcessing as ip
 import numpy as np
 
 # *** load the flatten image data and decimal number label ***

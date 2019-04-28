@@ -1,4 +1,4 @@
-import vgg16
+import nn_vgg16
 import tensorflow as tf
 import numpy as np
 from sklearn.metrics import accuracy_score
@@ -26,7 +26,7 @@ def train(x_train, y_train, x_test, y_test, iter_num=10, batch_size=32, save_pat
     img_batch, label_batch = tf.train.batch(input_queue, batch_size=batch_size)
 
     # *** step3 *** transfer the vgg model
-    vgg = vgg16.VGG16(x)
+    vgg = nn_vgg16.VGG16(x)
     cost, model, y_hat = vgg.renew_layers(y)
 
     # *** step4 *** open session
@@ -113,8 +113,11 @@ def evaluate(x_test, y_test, load_path='D:\\datasets\\Trail_NN\\trained_model'):
             else:
                 print("Not Building")
 
-            y_predicts.append(y_hat)
+        print(y_predicts)
+        print(y_test)
 
-        acc = accuracy_score(y_test, y_predicts)
-        predict('**** accuracy:%d ****' %acc)
-        return acc
+        #     y_predicts.append(y_hat)
+        #
+        # acc = accuracy_score(y_test, y_predicts)
+        # predict('**** accuracy:%d ****' %acc)
+        # return acc

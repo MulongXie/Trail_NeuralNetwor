@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from vgg16 import CONFIG
+from nn_vgg16 import CONFIG
 
 
 # transfer int into c dimensions one-hot array
