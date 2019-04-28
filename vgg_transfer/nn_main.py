@@ -33,7 +33,7 @@ if predict:
     cv2.imshow('img', cv2.resize(x_test[test_index], (200, 200)))
     cv2.waitKey(0)
 
-# *** evaluate the test accuracy ***
+# *** evaluate the model accuracy ***
 eval = True
 if eval:
     nn_model.evaluate(x_test, y_org_test.tolist(), load_path='D:\\datasets\\Trail_NN\\trained_model')
