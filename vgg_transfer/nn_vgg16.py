@@ -3,8 +3,8 @@ import tensorflow as tf
 
 
 class CONFIG:
-    IMAGE_WIDTH = 64
-    IMAGE_HEIGHT = 64
+    IMAGE_WIDTH = 224
+    IMAGE_HEIGHT = 224
 
 
 class VGG16:

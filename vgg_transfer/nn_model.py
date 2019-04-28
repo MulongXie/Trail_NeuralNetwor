@@ -41,7 +41,7 @@ def train(x_train, y_train, x_test, y_test, save_path, iter_num=10, batch_size=3
         threads = tf.train.start_queue_runners(sess, coord)
 
         try:
-            # *** step 5 train ***
+            # *** step 5 *** train
             loss = 0
             for i in range(iter_num):
                 print('*** iteration num: %d/%d ***' %(i, iter_num))
@@ -52,6 +52,7 @@ def train(x_train, y_train, x_test, y_test, save_path, iter_num=10, batch_size=3
                     x_batch_test, y_batch_test = sess.run([img_batch_test, label_batch_test])
                     _, loss, y_hat_re = sess.run([model, cost, y_hat], feed_dict={x: x_batch, y: y_batch})
 
+                    # calculate the accuracy
                     correct = tf.equal(tf.argmax(y_hat_re, 1), tf.argmax(y, 1))
                     accuracy = tf.reduce_mean(tf.cast(correct, 'float'))
 
