@@ -35,4 +35,4 @@ if predict:
 
 eval = True
 if eval:
-    nn_model.evaluate(x_test, y_org_test)
+    nn_model.evaluate(x_test, y_org_test.tolist())

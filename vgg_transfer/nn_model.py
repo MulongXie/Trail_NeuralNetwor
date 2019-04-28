@@ -113,11 +113,11 @@ def evaluate(x_test, y_test, load_path='D:\\datasets\\Trail_NN\\trained_model'):
             else:
                 print("Not Building")
 
+            y_predicts.append(pre[0])
+
         print(y_predicts)
         print(y_test)
 
-        #     y_predicts.append(y_hat)
-        #
-        # acc = accuracy_score(y_test, y_predicts)
-        # predict('**** accuracy:%d ****' %acc)
-        # return acc
+        acc = accuracy_score(y_test, y_predicts)
+        print('**** accuracy:%f ****' %acc)
+        return acc
