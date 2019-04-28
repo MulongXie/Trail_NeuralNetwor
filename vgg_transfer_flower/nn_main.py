@@ -16,14 +16,16 @@ y = ip.expand(y_org, 5)  # label has 5 classes
 split = 700
 x_train = x[:-split]
 y_train = y[:-split]
+y_org_train = y_org[:-split]
 x_test = x[-split:]
 y_test = y[-split:]
 y_org_test = y_org[-split:]
 
 print('*** training sample shape: ' + str(np.shape(x_train)) + '***')
+print('*** training label shape: ' + str(np.shape(y_train)) + '***')
 
 # *** train the NN model ***
-train = True
+train = False
 if train:
     nn_model.train(x_train, y_train, x_test, y_test, save_path='D:\\datasets\\Trail_NN\\trained_model_flower\\flower')
 
@@ -38,4 +40,4 @@ if predict:
 # *** evaluate the test accuracy ***
 eval = False
 if eval:
-    nn_model.evaluate(x_test, y_org_test.tolist(), load_path='D:\\datasets\\Trail_NN\\trained_model_flower')
+    nn_model.evaluate(x_train, y_org_train.tolist(), load_path='D:\\datasets\\Trail_NN\\trained_model_flower')

@@ -76,7 +76,7 @@ def load_image_flower(root_path):
     imgs_label = np.random.permutation(imgs_label)
 
     print(np.shape(imgs))
-    print(len(imgs))
+    print(np.shape(imgs_label))
 
     return imgs, imgs_label
 
