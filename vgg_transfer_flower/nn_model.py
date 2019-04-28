@@ -7,10 +7,10 @@ import nn_imgProcessing as ip
 
 
 class CONFIG:
-    IMAGE_WIDTH = 64
-    IMAGE_HEIGHT = 64
+    IMAGE_WIDTH = 112
+    IMAGE_HEIGHT = 112
 
-    ITER_NUM = 10
+    ITER_NUM = 15
     BATCH_SIZE = 32
 
     MODEL_NAME = 'flower'

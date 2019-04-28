@@ -56,7 +56,8 @@ class VGG16:
     def renew_layers(self, y_train):
         self.renew_graph['flatten'] = tf.contrib.layers.flatten(self.renew_graph['maxpool5'])
         self.renew_graph['fc6'] = tf.contrib.layers.fully_connected(self.renew_graph['flatten'], 1024)
-        self.renew_graph['fc7'] = tf.contrib.layers.fully_connected(self.renew_graph['fc6'], int(np.shape(y_train)[1]), activation_fn=None)
+        self.renew_graph['drop1'] = tf.nn.dropout(self.renew_graph['fc6'], 0.5)
+        self.renew_graph['fc7'] = tf.contrib.layers.fully_connected(self.renew_graph['drop1'], int(np.shape(y_train)[1]), activation_fn=None)
         y_hat = tf.add(self.renew_graph['fc7'], 0, name='y_hat')  # the intermediate value used to calculate the accuracy
 
         print('y_hat type ' + str(type(y_hat)))

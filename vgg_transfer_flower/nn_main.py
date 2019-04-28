@@ -25,7 +25,7 @@ print('*** training sample shape: ' + str(np.shape(x_train)) + '***')
 print('*** training label shape: ' + str(np.shape(y_train)) + '***')
 
 # *** train the NN model ***
-train = False
+train = True
 if train:
     nn_model.train(x_train, y_train, x_test, y_test, save_path='D:\\datasets\\Trail_NN\\trained_model_flower\\flower')
 
@@ -40,4 +40,4 @@ if predict:
 # *** evaluate the test accuracy ***
 eval = True
 if eval:
-    nn_model.evaluate(x_train, y_org_train.tolist(), load_path='D:\\datasets\\Trail_NN\\trained_model_flower')
+    nn_model.evaluate(x_test, y_org_test.tolist(), load_path='D:\\datasets\\Trail_NN\\trained_model_flower')
