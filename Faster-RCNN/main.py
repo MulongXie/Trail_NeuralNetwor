@@ -12,8 +12,6 @@ for f in os.listdir(label_root):
     img_path = os.path.join(img_root, f[:-3] + 'jpg')
 
     xml_img_info, xml_obj = file.read_xml(label_path)
-    print(xml_obj)
-    # img = cv2.imread(img_path)
-    #
-    # cv2.imshow('img', img)
-    # cv2.waitKey(0)
+    img = cv2.imread(img_path)
+
+    pi.label(img, xml_obj)
