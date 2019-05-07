@@ -53,6 +53,9 @@ class VGG16:
         pool = tf.nn.max_pool(pre_layer, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
         return pool
 
+    def get_base(self):
+        return self.vgg_graph
+
     def renew_layers(self, y_train):
         self.renew_graph['flatten'] = tf.contrib.layers.flatten(self.renew_graph['maxpool5'])
         self.renew_graph['fc6'] = tf.contrib.layers.fully_connected(self.renew_graph['flatten'], 1024)
