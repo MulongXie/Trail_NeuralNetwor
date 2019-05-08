@@ -1,6 +1,6 @@
-import os
+import keras
+import numpy as np
+from keras.applications import vgg16
+from keras.applications import resnet50
 
-input_path = 'D:\datasets\PASCAL\VOCdevkit'
-data_paths = [os.path.join(input_path,s) for s in ['VOC2012']]
-
-print(data_paths)
+res = resnet50.ResNet50()
